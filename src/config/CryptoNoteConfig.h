@@ -1,7 +1,8 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018-2019, The TurtleCoin Developers
-//
+// Copyright (c) 2018-2019, WOC Developer's Team
+// Copyright (c) 2019-2020, Yucreat Developers
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -37,15 +38,15 @@ const uint32_t ZAWY_DIFFICULTY_BLOCK_INDEX                   = 187000;
 const size_t   ZAWY_DIFFICULTY_V2                            = 0;
 const uint8_t  ZAWY_DIFFICULTY_DIFFICULTY_BLOCK_VERSION      = 3;
 
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
-const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 310000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 350000;
+const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 400000;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 20;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(3700000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(1);
 
 /* How to generate a premine:
 
@@ -139,9 +140,9 @@ const uint64_t MAX_EXTRA_SIZE_V2_HEIGHT                      = 1300000;
 /* For new projects forked from this code base, the values immediately below
    should be changed to 0 to prevent issues with transaction processing 
    and other possible unexpected behavior */
-const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 1400000;
-const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT               = 1600000;
-const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 1600000;
+const uint64_t TRANSACTION_SIGNATURE_COUNT_VALIDATION_HEIGHT = 0;
+const uint64_t BLOCK_BLOB_SHUFFLE_CHECK_HEIGHT               = 0;
+const uint64_t TRANSACTION_INPUT_BLOCKTIME_VALIDATION_HEIGHT = 0;
 
 /* This describes how many blocks of "wiggle" room transactions have regarding
    when the outputs can be spent based on a reasonable belief that the outputs
@@ -220,7 +221,7 @@ const uint64_t FORK_HEIGHTS[] = {
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "YucCoin";
+    const char CRYPTONOTE_NAME[] = "yuCoin";
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
@@ -296,9 +297,9 @@ const uint64_t FORK_HEIGHTS[] = {
     const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES = 125; // 125 files
     const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT = 4; // 4 DB threads
 
-    const char LATEST_VERSION_URL[] = "http://latest.turtlecoin.lol";
+    const char LATEST_VERSION_URL[] = "http://www.yucreat.org";
 
-    const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
+    const std::string LICENSE_URL = "https://github.com/yucreat/blob/master/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {0xb7, 0x7c, 0x7a, 0x7c, 0xcf, 0x57, 0x57, 0x47, 0x67, 0xf7, 0x97, 0xa4, 0xb7, 0xc1, 0x47, 0xe7}};
