@@ -22,8 +22,8 @@ const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 3914525;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 1874878;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 4;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -41,11 +41,11 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX                 = 620000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V2              = 700000;
 const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 800000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 25;
+const unsigned EMISSION_SPEED_FACTOR                         = 20;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(370000000);
 
 /* How to generate a premine:
 
@@ -154,7 +154,7 @@ const uint64_t CRYPTONOTE_MEMPOOL_TX_FROM_ALT_BLOCK_LIVETIME = 60 * 60 * 24 * 7;
 const uint64_t CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL = 7;  // CRYPTONOTE_NUMBER_OF_PERIODS_TO_FORGET_TX_DELETED_FROM_POOL * CRYPTONOTE_MEMPOOL_TX_LIVETIME = time to forget tx
 
 const size_t   FUSION_TX_MAX_SIZE                            = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT * 30 / 100;
-const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 12;
+const size_t   FUSION_TX_MIN_INPUT_COUNT                     = 4;
 const size_t   FUSION_TX_MIN_IN_OUT_COUNT_RATIO              = 4;
 
 const uint32_t UPGRADE_HEIGHT_V2                             = 1;
@@ -211,7 +211,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "TurtleCoin";
+const char     CRYPTONOTE_NAME[]                             = "yuCoin";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -273,22 +273,22 @@ const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; //
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
-const uint64_t DATABASE_WRITE_BUFFER_MB_DEFAULT_SIZE         = 1024;          // 1 GB 
-const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 1024;          // 1 GB
-const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 500;           // 500 files
-const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 10;            // 10 DB threads
+const uint64_t DATABASE_WRITE_BUFFER_MB_DEFAULT_SIZE         = 256;          // 1 GB 
+const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 256;          // 1 GB
+const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 125;           // 500 files
+const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 4;            // 10 DB threads
 
-const char     LATEST_VERSION_URL[]                          = "http://latest.turtlecoin.lol";
-const std::string LICENSE_URL                                = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
+const char     LATEST_VERSION_URL[]                          = "http://www.yucreat.org";
+const std::string LICENSE_URL                                = "https://github.com/yucreat/blob/master/LICENSE";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9  }
+    {  0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x57, 0x57, 0x47, 0x65, 0xf9, 0x91, 0xa7, 0xb7, 0xc7, 0x47, 0xe7  }
 };
 
 const char* const SEED_NODES[] = {
   "206.189.142.142:11897",//rock
-  "145.239.88.119:11999", //cision
-  "142.44.242.106:11897", //tom
-  "165.227.252.132:11897" //iburnmycd
+  "185.181.10.119:11897", // Frankfurt
+  "185.144.158.244:11897", // Miami
+  "45.61.49.34:11897" // Toronto
 };
 } // CryptoNote
